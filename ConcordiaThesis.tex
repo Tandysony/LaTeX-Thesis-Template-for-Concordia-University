@@ -1,32 +1,33 @@
 
 %%%%%%%%%%%%%%%%%%%%%      ConcordiaThesis.tex  -- MikTex 2.9     %%%%%%%%%%%%%%%%%
-%%                                                                                                                  				
-%%      A LaTex thesis template for ENCS graduate student from Concordia University (v2.0)                                  
-%%                                                                                                                      				  
-%%                  Last updated on Nov. 2, 2015                                                                         
-%%         by     Suo Tan (tandysony@gmail.com)                                                                 
-%%                   Design Lab, ENCS                                                                          				   
-%%                   Concordia University                                                                       				    
-%%                   Montreal, QC, CA                                                                           				     
-%%                   July 15, 2015                                                                                				    
-%%                                                                                                                      				    
-%%  ---------------------------------------------------------------------------------------------------------------------------         
-%%  This thesis template has been created to make it easy to prepare your thesis using         
-%%  LaTeX while adhering to the Concordia University Thesis Specifications posted online:                           
+%%
+%%      A LaTex thesis template for ENCS graduate student from Concordia University (v2.0)
+%%
+%%                  Last updated on Nov. 2, 2015
+%%         by     Suo Tan (tandysony@gmail.com)
+%%                   Design Lab, ENCS
+%%                   Concordia University
+%%                   Montreal, QC, CA
+%%                   July 15, 2015
+%%
+%%  ---------------------------------------------------------------------------------------------------------------------------
+
+%%  This thesis template has been created to make it easy to prepare your thesis using
+%%  LaTeX while adhering to the Concordia University Thesis Specifications posted online:
 %%  https://www.concordia.ca/artsci/english/programs/graduate/english-ma/thesis-deadlines-formatting.html#format
 %%  http://www.concordia.ca/content/dam/concordia/offices/sgs/docs/handbooks/thesispreparationguide.pdf
 %%
-%%  The template has been tested with TeXstudio, TeXworks, CTex, and TeXnic                      
-%%  under MikTex 2.9, with UTF-8 encoding.                                                                   
-%%                                                                                                                                               
-%%  The ConcordiaU.sty file MUST be included in your thesis folder.                                                     
-%%                                                                                                                                                 
-%%  If you are running it at your first time, make sure that you have internet connection. 			      
-%%  You might need to download package(s) to ensure it works.											                         
-%%  In case that you changed your reference database (*.bib file) and have any problem  	
-%%  in generating references/citations correctly, please run in this sequence: "pdfLaTex  		
-%%  -->  bibTex --> pdfLaTex".  This may help.                                                                                                    
-%%                                                                                                                                                  
+%%  The template has been tested with TeXstudio, TeXworks, CTex, and TeXnic
+%%  under MikTex 2.9, with UTF-8 encoding.
+%%
+%%  The ConcordiaU.sty file MUST be included in your thesis folder.
+%%
+%%  If you are running it at your first time, make sure that you have internet connection.
+%%  You might need to download package(s) to ensure it works.
+%%  In case that you changed your reference database (*.bib file) and have any problem
+%%  in generating references/citations correctly, please run in this sequence: "pdfLaTex
+%%  -->  bibTex --> pdfLaTex".  This may help.
+%%
 %%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%
 
 
@@ -34,7 +35,7 @@
 
 \documentclass[letterpaper,11pt,onecolumn,final]{report}              % define document type
 \usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}    % margin settings, required by Concordia University
-\usepackage{ConcordiaU}                         % page maker definiation for Title Page, Signature Page, and styles customized for Concordia University 
+\usepackage{setup/ConcordiaU}                         % page maker definiation for Title Page, Signature Page, and styles customized for Concordia University
 \usepackage{setspace}                             % manually configuration to spacing is needed.
 \doublespacing                                         % double spaced, required by Concordia University
 \usepackage[natbibapa]{apacite}			      % citation and bibliography package
@@ -46,24 +47,24 @@
 \usepackage{indentfirst}                           % add indent to the first line of each paragraph
 \usepackage{algorithmicx, algpseudocode}  %  write algorithms in pseudo code in a uniform style
 \usepackage{algorithm}                             % algorithm and pseudocode environment
-\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}    % blue color for all links, urls and citations 
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}    % blue color for all links, urls and citations
 \usepackage{enumitem}
-\renewcommand{\labelenumi}{(\arabic{enumi})}		%  "(1)." style for enuminated items 
+\renewcommand{\labelenumi}{(\arabic{enumi})}		%  "(1)." style for enuminated items
 \renewcommand{\labelitemii}{$\circ$}  	% (o) for the second level bullet items
 \usepackage[titletoc,title]{appendix}
 %\usepackage[titletoc,title]{appendix}   	   % appedix styles
-%\usepackage{epsfig}					           % eps figures 
+%\usepackage{epsfig}					           % eps figures
 %\usepackage{epstopdf}                           % eps to pdf print
 %\usepackage{multirow} 					          % multirow in a table cell
 
 %###################  END: Environment Setup  #######################
 
 
-\include{configs/Constance.tex}
+\include{configs/Constants}
 
 
 \begin{document}
-	
+
 %   ----------------------  CITATION  REMINDER ----------------------------
 %       \citet{key}  	         ==>>     Jones et al. (1990)
 %       \citep{key}  	        ==>>     (Jones et al., 1990)
