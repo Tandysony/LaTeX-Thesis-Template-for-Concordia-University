@@ -1,16 +1,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%      ConcordiaThesis.tex  -- MikTex 2.9     %%%%%%%%%%%%%%%%%
 %%
-%%      A LaTex thesis template for ENCS graduate student from Concordia University (v2.0)
+%% A LaTex thesis template for ENCS graduate student from Concordia University (v2.0)
 %%
-%%                  Last updated on Nov. 2, 2015
-%%         by     Suo Tan (tandysony@gmail.com)
-%%                   Design Lab, ENCS
-%%                   Concordia University
-%%                   Montreal, QC, CA
-%%                   July 15, 2015
+%% Last updated on Mars 07, 2021
+%% by Van Tuan Tran
+%% original by Suo Tan (tandysony@gmail.com)
+%% Ptidej Labs
+%% Concordia University
+%% Montreal, QC, CA
 %%
-%%  ---------------------------------------------------------------------------------------------------------------------------
+%% ---------------------------------------------------------------------------------
 
 %%  This thesis template has been created to make it easy to prepare your thesis using
 %%  LaTeX while adhering to the Concordia University Thesis Specifications posted online:
@@ -35,27 +35,27 @@
 
 \documentclass[letterpaper,11pt,onecolumn,final]{report}              % define document type
 \usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}    % margin settings, required by Concordia University
-\usepackage{setup/ConcordiaU}                         % page maker definiation for Title Page, Signature Page, and styles customized for Concordia University
+\usepackage{setup/ConcordiaU}                         % page maker definition for Title Page, Signature Page, and styles customized for Concordia University
 \usepackage{setspace}                             % manually configuration to spacing is needed.
 \doublespacing                                         % double spaced, required by Concordia University
-\usepackage[natbibapa]{apacite}			      % citation and bibliography package
+\usepackage[natbibapa]{apacite}                  % citation and bibliography package
 \usepackage{amsmath}                            % equations/formulas
 \usepackage[dvips]{graphicx}                    % to include images. For those who use .eps images. The option [dvips] must be there.
 \graphicspath{{figures/}}                           % all figures are put in the folder named "figures"
 %\usepackage{subfigure}                            % enable subfigures
-\usepackage{multirow} 					 		  % multirow in a table cellcc
+\usepackage{multirow}                                % multirow in a table cellcc
 \usepackage{indentfirst}                           % add indent to the first line of each paragraph
 \usepackage{algorithmicx, algpseudocode}  %  write algorithms in pseudo code in a uniform style
 \usepackage{algorithm}                             % algorithm and pseudocode environment
 \usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}    % blue color for all links, urls and citations
 \usepackage{enumitem}
-\renewcommand{\labelenumi}{(\arabic{enumi})}		%  "(1)." style for enuminated items
-\renewcommand{\labelitemii}{$\circ$}  	% (o) for the second level bullet items
+\renewcommand{\labelenumi}{(\arabic{enumi})}        %  "(1)." style for enumerated items
+\renewcommand{\labelitemii}{$\circ$}      % (o) for the second level bullet items
 \usepackage[titletoc,title]{appendix}
-%\usepackage[titletoc,title]{appendix}   	   % appedix styles
-%\usepackage{epsfig}					           % eps figures
+%\usepackage[titletoc,title]{appendix}          % appendix styles
+%\usepackage{epsfig}                               % eps figures
 %\usepackage{epstopdf}                           % eps to pdf print
-%\usepackage{multirow} 					          % multirow in a table cell
+%\usepackage{multirow}                               % multirow in a table cell
 
 %###################  END: Environment Setup  #######################
 
@@ -66,9 +66,9 @@
 \begin{document}
 
 %   ----------------------  CITATION  REMINDER ----------------------------
-%       \citet{key}  	         ==>>     Jones et al. (1990)
-%       \citep{key}  	        ==>>     (Jones et al., 1990)
-%       \citep{key1,key2}  	==>>     (Jones et al., 1990; Smith, 1989)
+%       \citet{key}               ==>>     Jones et al. (1990)
+%       \citep{key}              ==>>     (Jones et al., 1990)
+%       \citep{key1,key2}      ==>>     (Jones et al., 1990; Smith, 1989)
 
 %%%%%%%%%% Pages with Roman Numerals %%%%%%%%%
 \include{Abstract}
@@ -83,10 +83,10 @@
 %%%%%%%%%% Appendices %%%%%%%%%%%%%%%%
 % ---- Appendix settings. Please Do NOT change them. -----
 \appendix
-\setcounter{table}{0}		% reset the table counter
-\setcounter{figure}{0}		% reset the figure counter
-\renewcommand{\thefigure}{\Alph{chapter}.\arabic{figure}} 	% numbering the a figure in Appendix as Figure A.2, Figure B.1, etc.
-\renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}		% numbering the a table in Appendix as Table A.2, Table B.1, etc.
+\setcounter{table}{0}        % reset the table counter
+\setcounter{figure}{0}        % reset the figure counter
+\renewcommand{\thefigure}{\Alph{chapter}.\arabic{figure}}     % numbering the a figure in Appendix as Figure A.2, Figure B.1, etc.
+\renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}        % numbering the a table in Appendix as Table A.2, Table B.1, etc.
 
 %%%%%%%%%% Body of Appendix %%%%%%%%%%%%%%%%
 \begin{appendices}
@@ -94,13 +94,9 @@
     %\include{Appendix_B}
 \end{appendices}
 
-
-
-
-
 %%%%%%%%%% References %%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{Bibliography}  %  Add Bibliography to TOC
 \bibliography{ThesisRef}        % Your .bib files name here
-\bibliographystyle{apacite}  	% References are in APA style
+\bibliographystyle{apacite}      % References are in APA style
 
 \end{document}
