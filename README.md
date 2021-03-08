@@ -9,6 +9,8 @@ A LaTeX Thesis Template and Style for ENCS Graduate Students from Concordia Univ
 * Concordia University
 * Montreal, QC, CA
 
+Overleaf template available: https://www.overleaf.com/latex/templates/concordia-university-thesis-template/ngjstfpkgxpk
+
 # 1. Introduction
 This thesis template has been created to make it easy to prepare your thesis using LaTeX while adhering to the [Concordia University Thesis Specifications posted online](https://www.concordia.ca/artsci/english/programs/graduate/english-ma/thesis-deadlines-formatting.html#format). The official thesis examples are provided here as a PDF file: http://www.concordia.ca/content/dam/concordia/offices/sgs/docs/handbooks/thesispreparationguide.pdf. Please refer to the last few pages for the thesis example.
 
