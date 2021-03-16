@@ -1,32 +1,33 @@
 
 %%%%%%%%%%%%%%%%%%%%%      ConcordiaThesis.tex  -- MikTex 2.9     %%%%%%%%%%%%%%%%%
-%%                                                                                                                  				
-%%      A LaTex thesis template for ENCS graduate student from Concordia University (v2.0)                                  
-%%                                                                                                                      				  
-%%                  Last updated on Nov. 2, 2015                                                                         
-%%         by     Suo Tan (tandysony@gmail.com)                                                                 
-%%                   Design Lab, ENCS                                                                          				   
-%%                   Concordia University                                                                       				    
-%%                   Montreal, QC, CA                                                                           				     
-%%                   July 15, 2015                                                                                				    
-%%                                                                                                                      				    
-%%  ---------------------------------------------------------------------------------------------------------------------------         
-%%  This thesis template has been created to make it easy to prepare your thesis using         
-%%  LaTeX while adhering to the Concordia University Thesis Specifications posted online:                           
+%%
+%% A LaTex thesis template for ENCS graduate student from Concordia University (v2.0)
+%%
+%% Last updated on Mars 07, 2021
+%% by Van Tuan Tran
+%% original by Suo Tan (tandysony@gmail.com)
+%% Ptidej Labs
+%% Concordia University
+%% Montreal, QC, CA
+%%
+%% ---------------------------------------------------------------------------------
+
+%%  This thesis template has been created to make it easy to prepare your thesis using
+%%  LaTeX while adhering to the Concordia University Thesis Specifications posted online:
 %%  https://www.concordia.ca/artsci/english/programs/graduate/english-ma/thesis-deadlines-formatting.html#format
 %%  http://www.concordia.ca/content/dam/concordia/offices/sgs/docs/handbooks/thesispreparationguide.pdf
 %%
-%%  The template has been tested with TeXstudio, TeXworks, CTex, and TeXnic                      
-%%  under MikTex 2.9, with UTF-8 encoding.                                                                   
-%%                                                                                                                                               
-%%  The ConcordiaU.sty file MUST be included in your thesis folder.                                                     
-%%                                                                                                                                                 
-%%  If you are running it at your first time, make sure that you have internet connection. 			      
-%%  You might need to download package(s) to ensure it works.											                         
-%%  In case that you changed your reference database (*.bib file) and have any problem  	
-%%  in generating references/citations correctly, please run in this sequence: "pdfLaTex  		
-%%  -->  bibTex --> pdfLaTex".  This may help.                                                                                                    
-%%                                                                                                                                                  
+%%  The template has been tested with TeXstudio, TeXworks, CTex, and TeXnic
+%%  under MikTex 2.9, with UTF-8 encoding.
+%%
+%%  The ConcordiaU.sty file MUST be included in your thesis folder.
+%%
+%%  If you are running it at your first time, make sure that you have internet connection.
+%%  You might need to download package(s) to ensure it works.
+%%  In case that you changed your reference database (*.bib file) and have any problem
+%%  in generating references/citations correctly, please run in this sequence: "pdfLaTex
+%%  -->  bibTex --> pdfLaTex".  This may help.
+%%
 %%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%
 
 
@@ -34,82 +35,58 @@
 
 \documentclass[letterpaper,11pt,onecolumn,final]{report}              % define document type
 \usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}    % margin settings, required by Concordia University
-\usepackage{ConcordiaU}                         % page maker definiation for Title Page, Signature Page, and styles customized for Concordia University 
+\usepackage{setup/ConcordiaU}                         % page maker definition for Title Page, Signature Page, and styles customized for Concordia University
 \usepackage{setspace}                             % manually configuration to spacing is needed.
 \doublespacing                                         % double spaced, required by Concordia University
-\usepackage[natbibapa]{apacite}			      % citation and bibliography package
+\usepackage[natbibapa]{apacite}                  % citation and bibliography package
 \usepackage{amsmath}                            % equations/formulas
 \usepackage[dvips]{graphicx}                    % to include images. For those who use .eps images. The option [dvips] must be there.
 \graphicspath{{figures/}}                           % all figures are put in the folder named "figures"
 %\usepackage{subfigure}                            % enable subfigures
-\usepackage{multirow} 					 		  % multirow in a table cellcc
+\usepackage{multirow}                                % multirow in a table cellcc
 \usepackage{indentfirst}                           % add indent to the first line of each paragraph
 \usepackage{algorithmicx, algpseudocode}  %  write algorithms in pseudo code in a uniform style
 \usepackage{algorithm}                             % algorithm and pseudocode environment
-\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}    % blue color for all links, urls and citations 
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}    % blue color for all links, urls and citations
 \usepackage{enumitem}
-\renewcommand{\labelenumi}{(\arabic{enumi})}		%  "(1)." style for enuminated items 
-\renewcommand{\labelitemii}{$\circ$}  	% (o) for the second level bullet items
+\renewcommand{\labelenumi}{(\arabic{enumi})}        %  "(1)." style for enumerated items
+\renewcommand{\labelitemii}{$\circ$}      % (o) for the second level bullet items
 \usepackage[titletoc,title]{appendix}
-%\usepackage[titletoc,title]{appendix}   	   % appedix styles
-%\usepackage{epsfig}					           % eps figures 
+%\usepackage[titletoc,title]{appendix}          % appendix styles
+%\usepackage{epsfig}                               % eps figures
 %\usepackage{epstopdf}                           % eps to pdf print
-%\usepackage{multirow} 					          % multirow in a table cell
+%\usepackage{multirow}                               % multirow in a table cell
 
 %###################  END: Environment Setup  #######################
 
 
-%###################  BEGIN: Degree Infor  #######################
-% A blank field will be set to its defualt value 
-
-\author{Suo Tan}    % your full name. Defaut: Suo Tan
-\title{A \LaTeX{} Thesis Template for ENCS Graduate Student from Concordia University}    % your thesis title
-\mastersDegree{Master of Applied Science}  % For master's degree only, will be ignored if PhD.  Default: Master of Applied Science
-%%% Following two lines are required for Ph.D. thesis. %%%
-\titleOfPhDAuthor{Mr.}         % or Ms., Mrs., Miss, etc. (only for PhD's)
-\PhD                                    % Masters by default, if comment out this line
-\program{Industrial Engineering}  % program towards your degree. E.g., Mechanical Engineering, Quality System Engineering. Default: I.E.
-\dept{Mechanical and Industrial Engineering}       % your department. Default:  Mechanical and Industrial Engineering
-\chairOfDept{Martin D. Pugh}     % your department chair. default:  Martin D. Pugh, Chair of MIE (As of Oct 2015)
-\deanOfENCS{Amir Asif}       % Dean of ENCS. Default:  Amir Asif, Dean of ENCS (As of Oct 2015)
-
-%%%% Your Final Examining Committee Members %%%
-\chairOfCommittee{Name of the Chair}
-\examinerExternalOfCommittee{Name of External Examiner}
-\examinerFirstOfCommittee{Name of Examiner One}
-\examinerSecondOfCommittee{Name of Examiner Two} % for PhD student 
-\principaladvisor{Yong Zeng}
-%%Following two lines are required if you have a co-supervisor
-%\cosupervisor                    
-%\myCoSupervisor{Name of Co-supervisor}
-
-%###################  End: Degree Infor  #######################
+\include{configs/Constants}
 
 
 \begin{document}
-	
+
 %   ----------------------  CITATION  REMINDER ----------------------------
-%       \citet{key}  	         ==>>     Jones et al. (1990)
-%       \citep{key}  	        ==>>     (Jones et al., 1990)
-%       \citep{key1,key2}  	==>>     (Jones et al., 1990; Smith, 1989)
+%       \citet{key}               ==>>     Jones et al. (1990)
+%       \citep{key}              ==>>     (Jones et al., 1990)
+%       \citep{key1,key2}      ==>>     (Jones et al., 1990; Smith, 1989)
 
 %%%%%%%%%% Pages with Roman Numerals %%%%%%%%%
 \include{Abstract}
 \include{Acknowledgements}
 
 %%%%%%%%%% Body of Thesis %%%%%%%%%%%%%%%%
-\include{Chapter_1}
-\include{Chapter_2}
+\include{chapters/Chapter_1}
+\include{chapters/Chapter_2}
 %\include{Experiment} % chapter title as the chapter name.
 
 
 %%%%%%%%%% Appendices %%%%%%%%%%%%%%%%
 % ---- Appendix settings. Please Do NOT change them. -----
 \appendix
-\setcounter{table}{0}		% reset the table counter
-\setcounter{figure}{0}		% reset the figure counter
-\renewcommand{\thefigure}{\Alph{chapter}.\arabic{figure}} 	% numbering the a figure in Appendix as Figure A.2, Figure B.1, etc.
-\renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}		% numbering the a table in Appendix as Table A.2, Table B.1, etc.
+\setcounter{table}{0}        % reset the table counter
+\setcounter{figure}{0}        % reset the figure counter
+\renewcommand{\thefigure}{\Alph{chapter}.\arabic{figure}}     % numbering the a figure in Appendix as Figure A.2, Figure B.1, etc.
+\renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}        % numbering the a table in Appendix as Table A.2, Table B.1, etc.
 
 %%%%%%%%%% Body of Appendix %%%%%%%%%%%%%%%%
 \begin{appendices}
@@ -117,13 +94,9 @@
     %\include{Appendix_B}
 \end{appendices}
 
-
-
-
-
 %%%%%%%%%% References %%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{Bibliography}  %  Add Bibliography to TOC
 \bibliography{ThesisRef}        % Your .bib files name here
-\bibliographystyle{apacite}  	% References are in APA style
+\bibliographystyle{apacite}      % References are in APA style
 
 \end{document}
